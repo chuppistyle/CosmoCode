@@ -28,10 +28,29 @@ body{
 h1, h2, h3, h4 {
   font-family: 'Love Ya Like A Sister', cursive;
 }
-.section-paralax-1, .section-paralax-2, .section-paralax-3, .section-paralax-4, .section-paralax-5, .section-paralax-6, .section-paralax-7, .section-paralax-8, .section-paralax-9, .section-paralax-10 {
-  height: 100vh;
+.section-1{
+  height:100vh;
+  position: relative;
 }
-section.section-paralax-1 h1.text-center{
+.bg-video {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -99999;
+  background-size: cover;
+  right: 0;
+  bottom: 0; }
+
+ .section-paralax {
+   height: 100vh;
+   background: url("../img/bg.jpg");
+   background-attachment: fixed;
+   -webkit-background-size: cover;
+   background-size:cover;
+ }
+section.section-1 h1.text-center{
   margin-top:35vh;
   font-size: 20rem;
 }
@@ -64,17 +83,25 @@ nav.menu-left{
 nav.menu-left ul{
   padding: 0;
   margin: 0;
+  position: relative;
 }
 .small-planet{
   list-style: none;
   margin:1vh;
   padding: 0;
   display: block;
+  position: absolute;
+}
+.small-planet:not(#saturn)
+{
+  left: 1.6vw;
 }
 .nav>li>a{
-  padding: 0;
+  padding:  0;
   margin: 0;
+  position: relative;
 }
+
 .nav>li>a:hover{
   background-color: transparent;
 }
@@ -88,34 +115,13 @@ nav.menu-left ul{
   -webkit-transition: width 2s, height 4s;
   transition: width 0.5s, height 0.5s;
 }
-.small-planet:not(#saturn)
-{
-  padding-left: 1.2vw;
-}
+
 .small-planet img:active, .small-planet img:hover, li.active img{
   filter: none;
   height: 6vh;
 }
-
 /*EndRPM*/
 
-
-
-
-.section-paralax-2 {
-  background: url("../img/chalkboard.jpg");
-  background-attachment: fixed; }
-
-.bg-video {
-  position: absolute;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -99999;
-  background-size: cover;
-  right: 0;
-  bottom: 0; }
 
 
 /*********************************/
