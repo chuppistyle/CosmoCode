@@ -7,35 +7,50 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CosmoCode</title>
     <link rel="shortcut icon" href="img/big-moon.png" type="image/png">
+    <link rel="stylesheet" href="fonts\font-awesome-4.7.0\css\font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body data-spy="scroll" data-target=".menu-left" data-offset="200">
+<body data-spy="scroll" data-target="#menu-bar" data-offset="200">
 
-<nav class="menu-left">
+<nav class="menu-left" id="menu-bar">
     <ul class="nav">
-        <li class="small-planet" id="sun"><a href="#section_sun"><img src="img/svg-planets/sun.svg" alt="Sun"></li></a>
-        <li class="small-planet" id="mercury"><a href="#section_mercury"><img src="img/svg-planets/mercury.svg" alt="Mercury"></a></li>
-        <li class="small-planet" id="venus"><a href="#section_venus"><img src="img/svg-planets/venus.svg" alt="Venus"></a></li>
-        <li class="small-planet" id="earth"><a href="#section_earth"><img src="img/svg-planets/earth.svg" alt="Earth"></a></li>
-        <li class="small-planet" id="mars"><a href="#section_mars"><img src="img/svg-planets/mars.svg" alt="Mars"></a></li>
-        <li class="small-planet" id="jupiter"><a href="#section_jupiter"><img src="img/svg-planets/jupiter.svg" alt="Jupiter"></a></li>
-        <li class="small-planet" id="saturn" style=""><a href="#section_saturn"><img src="img/svg-planets/saturn.svg" alt="Saturn"></a></li>
-        <li class="small-planet" id="uranus"><a href="#section_uranus"><img src="img/svg-planets/uranus.svg" alt="Uranus"></a></li>
-        <li class="small-planet" id="neptune"><a href="#section_neptune"><img src="img/svg-planets/neptune.svg" alt="Neptune"></a></li>
+        <li class="small-planet" id="sun"><a  class="go-to" href="#section_sun"><img src="img/svg-planets/sun.svg" alt="Sun"></a></li>
+        <li class="small-planet" id="mercury"><a  class="go-to" href="#section_mercury"><img src="img/svg-planets/mercury.svg" alt="Mercury"></a></li>
+        <li class="small-planet" id="venus"><a class="go-to"  href="#section_venus"><img src="img/svg-planets/venus.svg" alt="Venus"></a></li>
+        <li class="small-planet" id="earth"><a class="go-to"  href="#section_earth"><img src="img/svg-planets/earth.svg" alt="Earth"></a></li>
+        <li class="small-planet" id="mars"><a  class="go-to"  href="#section_mars"><img src="img/svg-planets/mars.svg" alt="Mars"></a></li>
+        <li class="small-planet" id="jupiter"><a class="go-to"  href="#section_jupiter"><img src="img/svg-planets/jupiter.svg" alt="Jupiter"></a></li>
+        <li class="small-planet" id="saturn" style=""><a  class="go-to" href="#section_saturn"><img src="img/svg-planets/saturn.svg" alt="Saturn"></a></li>
+        <li class="small-planet" id="uranus"><a  class="go-to" href="#section_uranus"><img src="img/svg-planets/uranus.svg" alt="Uranus"></a></li>
+        <li class="small-planet" id="neptune"><a class="go-to"  href="#section_neptune"><img src="img/svg-planets/neptune.svg" alt="Neptune"></a></li>
     </ul>
 </nav>
-<div class="space-rocket"><a href="#top"><img src="img/svg-things/space-rocket.svg" alt="Space Rocket"></a></div>
+<div class="space-rocket"><a  class="go-to"  href="#section_top"><img src="img/svg-things/space-rocket.svg" alt="Space Rocket"></a></div>
 
-<section class="section-1">
+<section class="section-1" id="section_top">
     <div class="container-fluid">
         <h1 class="text-center">SOLAR SYSTEM</h1>
         <video autoplay loop class="bg-video" muted>
             <source src="video/Cosmo.mp4">
         </video>
+        <a class="go-to" href="#section_sun" id="arrow-down">
+                <i class="fa fa-angle-down bounce" aria-hidden="true"></i>
+                <i class="fa fa-angle-down bounce" aria-hidden="true"></i>
+                <i class="fa fa-angle-down bounce" aria-hidden="true"></i>
+        </a>
+
     </div>
 </section>
+
 <section class="section-paralax" id="section_sun">
+
+    <div class="container-fluid">
+        <div class="row">
+        <div class="col-md-5 col-md-offset-1">col-md-5 col-md-offset-1</div>
+        <div class="col-md-5 col-md-offset-1">col-md-5 col-md-offset-1</div>
+        </div>
+    </div>
 </section>
 <section class="section-paralax" id="section_mercury">
     <div id="section3">3</div>

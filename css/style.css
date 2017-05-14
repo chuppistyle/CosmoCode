@@ -2,6 +2,68 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500,500i,700");
 @import url('https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister');
 /******EndFonts*****/
+/* KeyFrames*/
+
+/* Scroll down indicator (bouncing) */
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0); }
+  40% {
+    -webkit-transform: translateY(-30px); }
+  60% {
+    -webkit-transform: translateY(-15px); } }
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0); }
+  40% {
+    -moz-transform: translateY(-30px); }
+  60% {
+    -moz-transform: translateY(-15px); } }
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0); }
+  40% {
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+    transform: translateY(-30px); }
+  60% {
+    -webkit-transform: translateY(-15px);
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -o-transform: translateY(-15px);
+    transform: translateY(-15px); } }
+
+@keyframes show {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }}
+@keyframes hide {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  99% {
+    display: block;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }}
+/* End KeyFrames*/
 /******Clear********/
 div::before, ul::before {
   content: '';
@@ -28,38 +90,39 @@ body{
 h1, h2, h3, h4 {
   font-family: 'Love Ya Like A Sister', cursive;
 }
-.section-1{
-  height:100vh;
-  position: relative;
-}
-.bg-video {
-  position: absolute;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -99999;
-  background-size: cover;
-  right: 0;
-  bottom: 0; }
 
- .section-paralax {
-   height: 100vh;
-   background: url("../img/bg.jpg");
-   background-attachment: fixed;
-   -webkit-background-size: cover;
-   background-size:cover;
- }
-section.section-1 h1.text-center{
-  margin-top:35vh;
-  font-size: 20rem;
+/*arrow bounce*/
+a#arrow-down{
+  text-decoration: none;
+  margin-top: 5vh;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 45vw;
 }
+a#arrow-down:hover{
+  text-decoration: none;
+}
+.bounce {
+  font-size: 5rem;
+  margin: 0 auto;
+  display: block;
+  padding: 0;
+  width: 5vw;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+  bottom: 0;
+  color: #f7f7f7;
+  background: rgba(0, 0, 18, 0.2);
+}
+/*End arrow bounce*/
 /*Space-Rocket*/
 .space-rocket{
   position: fixed;
   bottom: 5vh;
   right: 5vw;
   display: none;
+  z-index: 9999999999999999;
 }
 .space-rocket img{
   height: 10vh;
@@ -71,14 +134,28 @@ section.section-1 h1.text-center{
 }
   /*EndSR*/
 /**Right planet menu**/
-
-nav.menu-left{
+.menu-left{
+  display: none;
+}
+.menu-left-vision{
   position: fixed;
   padding: 0;
   margin: 0;
   top: 15vh;
-  display: none;
-  transition: all 2s linear;
+  left: 2vw;
+  z-index: 9999999999999999;
+  animation: show .5s linear;
+  animation-fill-mode: forwards;
+}
+.menu-left-hide{
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  top: 15vh;
+  left: 2vw;
+  z-index: 9999999999999999;
+  animation: hide .2s linear;
+  animation-fill-mode: forwards;
 }
 nav.menu-left ul{
   padding: 0;
@@ -114,13 +191,44 @@ nav.menu-left ul{
   filter: sepia(100%) blur(1px);
   -webkit-transition: width 2s, height 4s;
   transition: width 0.5s, height 0.5s;
+  z-index: 99999999;
 }
 
 .small-planet img:active, .small-planet img:hover, li.active img{
   filter: none;
   height: 6vh;
 }
-/*EndRPM*/
+/** End Right planet menu**/
+
+.section-paralax {
+  height: 100vh;
+  background: url("../img/bg.jpg");
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  background-size:cover;
+  position: relative;
+}
+
+.section-1{
+  height:100vh;
+  position: relative;
+  text-align: center;
+}
+.bg-video {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -99999;
+  background-size: cover;
+  right: 0;
+  bottom: 0; }
+
+section.section-1 h1.text-center{
+  margin-top:35vh;
+  font-size: 20rem;
+}
 
 
 
