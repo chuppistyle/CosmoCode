@@ -97,7 +97,7 @@ a#arrow-down{
   margin-top: 5vh;
   display: block;
   position: absolute;
-  bottom: 0;
+  bottom: 2vw;
   left: 45vw;
 }
 a#arrow-down:hover{
